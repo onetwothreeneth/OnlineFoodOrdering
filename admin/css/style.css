@@ -1,0 +1,37 @@
+body{ box-sizing:border-box; margin: 0;}
+img{-khtml-user-select: none; -o-user-select: none; -moz-user-select: none; -webkit-user-select: none; user-select: none;}
+::-webkit-scrollbar {display: none;} ::-o-scrollbar {display: none;} ::-moz-scrollbar {display: none;} ::scrollbar {display: none;}
+
+/* index.php styles */
+.container{margin:0; width: 100%; height: 923px; background-color: transparent;  float: left;}
+
+.video-bg{float: left; margin-left: -1.3%;  width: 110vw; position: relative; position: absolute; top: 0; left: 0; z-index: -1;}
+.video{width: 110vw; opacity: 0.5;}
+.video-bg .welcome{float: left; z-index: 1100; position: absolute; top:24%; width: 40%; margin-right: 30%; margin-left: 30%;}
+.video-bg .welcome h1{font-family: verdana; font-weight: bold; color: white; font-size: 3vw; line-height: 100%;}
+.video-bg .welcome p{color: white; font-weight: regular; font-family: arial; margin-top: 5%; margin-left: 5%; margin-right: 5%;}
+.video-bg .welcome button{border:none; background-color: red; color: white; font-weight: bold; width:25%;  padding-top:2%; padding-bottom:2%; margin-left:2%; margin-right:2%; float: left; border-radius: 3%; -o-border-radius: 3%; -moz-border-radius: 3%; -webkit-border-radius: 3%;}
+.video-bg .welcome .buttons{margin-left: 10%; margin-top: 3%;}
+.video-bg .welcome .blue{background-color: #3498db !important;}
+.video-bg .welcome .pink{background-color: #c0392b !important;}
+.video-bg .welcome .gray{background-color: #34495e !important;}
+
+.header{z-index: 100; width: 110vw; float: left; padding-left: 15%; font-size: 1.2vw;}
+.header ul{list-style-type: none;}
+.header li{display: inline; margin-left: 2.3%;}
+.header .logo a{color: white; font-size: 1.6vw; text-decoration: none;}
+.header .logo i{color: white; font-size: 1.6vw;}
+.header ul li a{color: white; font-family:calibri,sans-serif; letter-spacing: 0.1vw; font-size: 1vw;}
+
+.header .left{float: left; width: 59%; margin-top: 1.5%;}
+.header .right{float: left; width: 25%; margin-top: 2.1%;}
+
+.food{margin-bottom:5%; width: 110vw; float: left; margin-top: 60vw; padding-left: 2%; padding-right: 2%;}
+.food img{width: 95vw; height: 650px;}
+
+.about{padding-left:15%; padding-right: 35%; padding-top:5%; background-color:#F4F4F4; width:105vw; height:500px; margin-bottom:5%; float:left; background-repeat:no-repeat; background-position:right; margin-left:-2%; background-image: url('../img/about-img.png'); margin-top: 0vw;}
+.about-txt{float: left; width: 50%; height: 500px; pad }
+.about-txt i{font-size: 3vw; margin-left: 10%; color: white;}
+.about-txt p{font-size: 1vw; margin-bottom: 5%; text-indent: 10%;}
+.icon-cont{color:white; width: 20%; float: left; background-color: #333; margin-left: 3%; text-align: center; padding-top: 5%; padding-bottom: 3%; border-radius: 5%; padding-right: 1%;}
+.icon-wrap{color:white; margin-left: 10%;}
