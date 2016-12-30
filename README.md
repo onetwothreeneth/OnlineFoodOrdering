@@ -3,7 +3,7 @@
 Online food ordering system. Made this a year ago 2 nights before my solo thesis defense. sorry for the dirty codes , crazy folder structure, errors and unfinished modules. Newbie codes and coding techniques so hoping everyone can understand flow and proccess. Fully responsive using media queries no frameworks. Realtime updates using long polling. Unfinished homepage view http://localhost/conchos/admin/ this supposed to be the user homepage.
 
 ### PLEASE READ
-  Use this as reference only. should not be use as project or thesis. Deploy for a client. there are many errors ill try to update those just pull a request. lost the latest files of this system. this should have paypal payment etc. 
+  Use this as reference only. should not be use as project or thesis. Deploy for a client. there are many errors ill try to update those just create an issue. lost the latest files of this system. this should have paypal payment etc. 
 
 ### Features
 User
