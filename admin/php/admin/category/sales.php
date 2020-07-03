@@ -4,7 +4,7 @@ include "dbconn.php";
   echo "<table class='animated fadeInDown'>
 		    <tr> 
 		        <th>Id</th>
-		        <th>Date</th>
+		        <th>Data</th>
 		        <th>Email</th>
 			    <th>Total</th> 
 		    </tr>";
@@ -26,9 +26,9 @@ include "dbconn.php";
 			                    <td>$total</td>
 			                </tr>";
 
-			@$sales+= @str_replace("P","",$total);     
+			@$sales+= @str_replace("R$","",$total);     
 	 
 	  }  
 			echo "</table>"; 
-		echo "<span style='margin-right:0.5%; font-size:1vw; float:right;'><br><b>Total Sales</b> <kbd>P".$sales."</kbd></span>";
+		echo "<span style='margin-right:0.5%; font-size:1vw; float:right;'><br><b>Total Vendas</b> <kbd>R$".$sales."</kbd></span>";
  ?> 

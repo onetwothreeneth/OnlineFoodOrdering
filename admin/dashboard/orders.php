@@ -6,7 +6,7 @@ if(isset($admin)){} else { header('location:login'); }
 <!Doctype html>
 <html>
 	<head>
-		<title>Conchos Sisig</title>
+		<title>Pedido Online</title>
 		<link rel="icon" href="img/logo.png">
 
 		<!-- CUSTOM JS/CSS -->
@@ -46,14 +46,14 @@ if(isset($admin)){} else { header('location:login'); }
 		<!-- Start of header-->
         <div class="header">
                         <div class="left">
-                            <i class="fa fa-spoon"></i><i class="fa fa-spoon"></i> Concho's Sisig
+                            <i class="fa fa-spoon"></i><i class="fa fa-spoon"></i> Pedido Online
                         </div>
                         <div class="left2">
                             <i id="burgermenu" class="fa fa-bars" alt="1"></i>
                         </div>
                         <div class="right">
                             <div class="box">
-                                Welcome Admin <a href="out.php"><i class="fa fa-gear" style="color:white !important;"></i></a>
+                                Bme vindo Admin <a href="out.php"><i class="fa fa-gear" style="color:white !important;"></i></a>
                             </div>
                         </div>
                         <div class="right2">
@@ -80,8 +80,8 @@ if(isset($admin)){} else { header('location:login'); }
                   <?php
 							$conn = mysqli_connect('localhost','root','');
 							$dbconn = mysqli_select_db($conn,'conchos_sisig');
-							$orderid = $_GET['orderid'];
-                            $sql ="SELECT cart.id , cart.prod_id, cart.qty, products.name, products.price, products.description, products.image from cart INNER JOIN products on products.id=cart.prod_id where cart.status='1' and cart.order_id='$orderid'"; 
+							$order_id = $_GET['order_id'];
+                            $sql ="SELECT cart.id , cart.prod_id, cart.qty, products.name, products.price, products.description, products.image from cart INNER JOIN products on products.id=cart.prod_id where cart.status='1' and cart.order_id='$order_id'"; 
                                 $result = mysqli_query($conn,$sql);  
 
                                     echo "<table>";
@@ -111,7 +111,7 @@ if(isset($admin)){} else { header('location:login'); }
 
         <!-- Start of footer-->
         <div class="footer">
-            Copyright &copy 2016 - Concho's Sisis Admin Dashboard
+            Copyright &copy 2019 - Adalmir Neres de Matos Admin Dashboard
         </div>
         <!-- End of footer-->
 
@@ -128,7 +128,7 @@ if(isset($admin)){} else { header('location:login'); }
 <!-- Start of add product-->
 <div class="add_products animated bounce">
 		<div class="header-title">
-			 <h4> <i class="fa fa-plus"></i> Add Product</h4>
+			 <h4> <i class="fa fa-plus"></i> Adiconar Produto</h4>
 			 <span><i class="fa fa-remove"></i></span>
 		</div><br><br>
 		<div class="animated shake" id="erorr">

@@ -6,7 +6,7 @@ if(isset($email)){ } else { header('location:index'); }
 <!Doctype html>
 <html>
 	<head> 
-		<title>Conchos Home Of Sisig Goodness</title>
+		<title>Pedido Online</title>
 		<link rel="stylesheet" type="text/css" href="css/style.css">  
 		<link rel="icon" href="img/logo.png"> 
        	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -36,55 +36,55 @@ if(isset($email)){ } else { header('location:index'); }
 			</div>
 
 		        <div class="category animated fadeIn"> 
-				<button class="active">My Orders</button> 
+				<button class="active">Meus Pedidos</button> 
                         </div>
 
 			<div class="prod-content animated slideInLeft" ng-controller="mycart">
 				 
 				<div class="ordersummary"  ng-controller="orders"  ng-show="ords.length <= 0"> 
-					<center>No Orders Yet !</center>
+					<center>Sem Pedido !</center>
 				</div>
 				<div  ng-controller="orders" ng-hide="ords.length <= 0">
 					<div class="ordersummary" ng-repeat=" x in ords" > 
 						<div class="ordertrucking">
 							<table>
 								<tr> 
-									<th>Order Id</th>
-									<th>Date</th> 
+									<th>Número do Pedido</th>
+									<th>Data</th> 
 									<th>Total</th>
-									<th>Action</th>
+									<th>Processamento</th>
 								</tr>
 								<tr> 
 									<td>{{ x.order_id }}</td>
 									<td>{{ x.date }}</td> 
 									<td>{{ x.total }}</td>
-									<td><button alt="{{ x.order_id }}" ng-click="cancel($event)">Cancel</button><a href="summary.php?id={{ x.order_id }}&total={{ x.total }}&date={{ x.date }}" target="_blank"><button>View Orders</button></a></td>
+									<td><button alt="{{ x.order_id }}" ng-click="cancel($event)">Cancelar Pedido</button><a href="summary.php?id={{ x.order_id }}&total={{ x.total }}&date={{ x.date }}" target="_blank"><button>Vizualizar Pedido</button></a></td>
 								</tr>
 							</table>
 							<br>
 							<div class="box active" ng-bind="x in ords" ng-show="{{ x.status }} <= 1 ">
 								<i class="fa fa-spinner fa-pulse active"></i><br> 
-								<p class="active">Proccessing</p>
+								<p class="active">Proccessando</p>
 							</div>
 							<div class="box active" ng-bind="x in ords" ng-show="{{ x.status }} >= 2 ">
 								<i class="fa fa-spinner active"></i><br> 
-								<p class="active">Proccessing</p>
+								<p class="active">Proccessando</p>
 							</div>
 							<div class="box" ng-bind="x in ords" ng-show="{{ x.status }} == 1 ">
 								<i class="fa fa-automobile"></i><br>
-								<p>Delivering</p>
+								<p>Em Transito</p>
 							</div>
 							<div class="box" ng-bind="x in ords" ng-show="{{ x.status }} >= 2 ">
 								<i class="fa fa-automobile active2"></i><br>
-								<p class="active2">Delivering</p>
+								<p class="active2">Em Transito</p>
 							</div>
 							<div class="box" ng-bind="x in ords" ng-show="{{ x.status }} <=2 ">
 								<i class="fa fa-rocket"></i><br>
-								<p>Success</p>
+								<p>Entregue</p>
 							</div> 
 							<div class="box" ng-bind="x in ords" ng-show="{{ x.status }} == 3 ">
 								<i class="fa fa-rocket active3"></i><br>
-								<p class="active3">Success</p>
+								<p class="active3">Entregue</p>
 							</div> 
 						</div>
 					</div> 
@@ -95,7 +95,11 @@ if(isset($email)){ } else { header('location:index'); }
 
 
 		</div>
-  
+        <script type="text/javascript">
+		$(function(){
+			$('#orders').load('php/ordes.php');
+		});	
+		</script>  
 		<script type="text/javascript" src="js/jquery.js"></script>
 		<script type="text/javascript" src="js/default.js"></script> 
 		<script type="text/javascript" src="js/angular.js"></script> 

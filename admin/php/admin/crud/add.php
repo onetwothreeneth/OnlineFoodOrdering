@@ -20,22 +20,22 @@ $image = $_FILES['image']['name'];
          $row1 = mysqli_num_rows($result1);
              if($row1<='0'){
 
-                   $sql = "INSERT INTO products values('','$name','$category','$description','$price','$file_name','available')";
+                   $sql = "INSERT INTO products (name, category, description, price, image, status) values('$name','$category','$description','$price','$file_name','available')";
                    $result = mysqli_query($conn,$sql);
 
                       if($result){
-                          echo "yes";
+                          echo "adicionado com sucesso";
                       } else {
-                          echo "Something Went Wrong";
+                          echo "Alguma coisa deu errado";
                       }
              } else {
 
-                   echo "This Product already Exist";
+                   echo "Esse Produto j? existe";
 
              }
 
 
       } else {
-         echo "Eror";
+         echo "Erro";
       }
 ?>
