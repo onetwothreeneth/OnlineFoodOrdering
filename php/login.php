@@ -20,11 +20,11 @@ $row = mysqli_num_rows($result);
 					$sql8 = "INSERT INTO notifications values('','$name9',CURRENT_TIMESTAMP,'Logged In','0')";
 					$result8 = mysqli_query($conn,$sql8); 
    			
-   						echo "1";
+   						header("location: http://localhost/OnlineFoodOrdering-master/user.php");
 
 	} else {
 		
-		echo "0"; 
+		header("location:http://localhost/OnlineFoodOrdering-master/index.php");
 		
 	}
 

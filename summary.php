@@ -37,7 +37,7 @@ if(isset($email)){ } else { header('location:index'); }
 			</div>
 
 		        <div class="category animated fadeIn"> 
-				<button class="active">My Orders</button> 
+				<button class="active">Meus Pedidos</button> 
                         </div>
 
 			<div class="prod-content animated slideInLeft" ng-controller="mycart"> 
@@ -46,16 +46,16 @@ if(isset($email)){ } else { header('location:index'); }
 						<div class="ordertrucking">
 							<table>
 								<tr> 
-									<th>Order Id</th>
-									<th>Date</th> 
+									<th>Número Pedido</th>
+									<th>Data</th> 
 									<th>Total</th> 
-									<th>Action</th> 
+									<th>Processamento</th> 
 								</tr>
 								<tr> 
 									<td><?php echo $id = $_GET['id']; ?></td>
 									<td><?php echo $date = $_GET['date'];?></td> 
 									<td><?php echo $total = $_GET['total'];?></td>
-									<td><a href="orders"><button>View Status</button></a></td>
+									<td><a href="orders"><button>Vizualizar Processo</button></a></td>
 								</tr>
 							</table>
 							<br>
@@ -80,7 +80,7 @@ if(isset($email)){ } else { header('location:index'); }
 															<td>$name</td>
 															<td class='desc'>$description</td>
 															<td></td>
-															<td>P $price</td>
+															<td>R$ $price</td>
 															<td>$qty</td> 
 													  </tr>";
 										} 

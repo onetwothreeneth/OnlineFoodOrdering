@@ -6,7 +6,7 @@ if(isset($admin)){} else { header('location:login'); }
 <!Doctype html>
 <html>
 	<head>
-		<title>Conchos Sisig</title>
+		<title>Pedido Online</title>
 		<link rel="icon" href="img/logo.png">
 
 		<!-- CUSTOM JS/CSS -->
@@ -47,14 +47,14 @@ if(isset($admin)){} else { header('location:login'); }
 		<!-- Start of header-->
         <div class="header">
                         <div class="left">
-                            <i class="fa fa-spoon"></i><i class="fa fa-spoon"></i> Concho's Sisig
+                            <i class="fa fa-spoon"></i><i class="fa fa-spoon"></i> Pedido Online
                         </div>
                         <div class="left2">
                             <i id="burgermenu" class="fa fa-bars" alt="1"></i>
                         </div>
                         <div class="right">
                             <div class="box">
-                                Welcome Admin <a href="out.php"><i class="fa fa-gear" style="color:white !important;"></i></a>
+                                Bem Vindo Admin <a href="out.php"><i class="fa fa-gear" style="color:white !important;"></i></a>
                             </div>
                         </div>
                         <div class="right2">
@@ -71,7 +71,7 @@ if(isset($admin)){} else { header('location:login'); }
     				<i class="fa fa-bell"></i>
     			</div>
     			<div class="name active2">
-    				Notifications <!--<kbd style="background-color:#e74c3c;">31</kbd>-->
+    				Notificações <!--<kbd style="background-color:#e74c3c;">31</kbd>-->
     			</div>
     		</div>
     		<div class="menu" id="a_products">
@@ -79,7 +79,7 @@ if(isset($admin)){} else { header('location:login'); }
     				<i class="fa fa-spoon"></i>
     			</div>
     			<div class="name">
-    				Products
+    				Produtos
     			</div>
     		</div>
     		<div class="menu" id="a_orders">
@@ -87,7 +87,7 @@ if(isset($admin)){} else { header('location:login'); }
     				<i class="fa fa-cloud"></i>
     			</div>
     			<div class="name">
-    				Orders  
+    				Pedidos  
     			</div>
     		</div>
     		<div class="menu" id="a_sales">
@@ -95,7 +95,7 @@ if(isset($admin)){} else { header('location:login'); }
     				<i class="fa fa-bar-chart"></i>
     			</div>
     			<div class="name">
-    				Sales Report
+    				Relatório de Vendas
     			</div>
     		</div>
     		<div class="menu" id="a_messages">
@@ -103,7 +103,7 @@ if(isset($admin)){} else { header('location:login'); }
     				<i class="fa fa-envelope"></i>
     			</div>
     			<div class="name">
-    				Messages  
+    				Mensagens  
     			</div>
     		</div>
     		<div class="menu" id="a_accounts">
@@ -111,20 +111,20 @@ if(isset($admin)){} else { header('location:login'); }
     				<i class="fa fa-users"></i>
     			</div>
     			<div class="name">
-    				Accounts  
+    				Contas  
     			</div>
     		</div>
     	</div>
         <!-- End of sidebar-->
     	<!-- Start of Content-->
     	<div class="content">
-          Kenneh abenojar
+          
     	</div>
         <!-- End of Content-->
 
         <!-- Start of footer-->
         <div class="footer">
-            Copyright &copy 2016 - Concho's Sisis Admin Dashboard
+            Copyright &copy 2019 - Adalmir Neres Admin Dashboard
         </div>
         <!-- End of footer-->
 
@@ -141,7 +141,7 @@ if(isset($admin)){} else { header('location:login'); }
 <!-- Start of add product-->
 <div class="add_products animated bounce">
 		<div class="header-title">
-			 <h4> <i class="fa fa-plus"></i> Add Product</h4>
+			 <h4> <i class="fa fa-plus"></i> Adiconar Produtos</h4>
 			 <span><i class="fa fa-remove"></i></span>
 		</div><br><br>
 		<div class="animated shake" id="erorr">
@@ -154,7 +154,7 @@ if(isset($admin)){} else { header('location:login'); }
 						<div class="form-cont">
 							  <input type="file" name="image" value="" id="add_image" required accept="image/png,image/jpg,image/jpeg,image/gif,image/	bitman" >
 								<input type="text" name="name"  id="name" placeholder="Name" required="">
-								<input type="number" name="price" id="price" placeholder="Price" required="">
+								<input type="text" name="price" id="price" placeholder="Price" required="">
 								<select name="category" required="" id="category">
 										<option value="Sisig">Sisig</option>
 										<option value="Main-Meals">Main Meals</option>
@@ -164,7 +164,7 @@ if(isset($admin)){} else { header('location:login'); }
 										<option value="Extras">Extras</option>
 								</select>
 							 	<textarea name="description" id="description" rows="8" placeholder="Description" resizable></textarea>
-								<button id="addprod-submit">Submit</button>
+								<button id="addprod-submit">Salvar</button>
 						</div>
 			</form>
 </div>
@@ -173,7 +173,7 @@ if(isset($admin)){} else { header('location:login'); }
 <!-- Start of update product-->
 <div class="add_products2 animated bounce" id="update-cont">
 		<div class="header-title">
-			 <h4> <i class="fa fa-plus"></i> Update Product</h4>
+			 <h4> <i class="fa fa-plus"></i> Atualziar Produtos</h4>
 			 <span><i class="fa fa-remove"></i></span>
 		</div><br><br>
 		<div class="animated shake" id="erorr">
@@ -184,10 +184,10 @@ if(isset($admin)){} else { header('location:login'); }
 
 					<!-- Start of PopUp-->
 					<div class="popup animated bounceIn">
-							<span>Delete ? </span>
+							<span>Deletar ? </span>
 							<hr>
 							<button class="ok">Ok</button>
-							<button class="cancel">Cancel</button>
+							<button class="cancel">Cancelar</button>
 					</div>
 					<!-- End of PopUp-->
 

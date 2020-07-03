@@ -1,12 +1,18 @@
 //user products
-var app = angular.module('myApp', []);
+var app = angular.module('myAppf', []);
 app.controller('customersCtrl', function($scope, $http) {
 	setInterval(function(){
 	    $http.get("php/products-visitor.php")
 	    .then(function (response) {$scope.names = response.data.products;});
 	},1000);
 });
-
+var app = angular.module('myApp1', []);
+app.controller('customersCtrl', function($scope, $http) {
+	setInterval(function(){
+	    $http.get("php/products-user.php")
+	    .then(function (response) {$scope.names = response.data.products;});
+	},1000);
+});
 //count cart
 var app2 = angular.module('myApp2', []);
 app2.controller('count', function($scope, $http) {
@@ -52,7 +58,7 @@ app2.controller('totalctrl', function($scope, $http) {
 		    setTimeout(function(){
 		    	 $.post('php/checkout.php',{ total: total },function(data){ 
 		   	 		$(event.target).html("CheckOut");  $('#notif').show();
-					  	$('#notif').html('Order Is now Proccessing');
+					  	$('#notif').html('Seu pedido será processado');
 						setTimeout(function(){
 						  	$('#notif').fadeOut();
 						},1500);
@@ -81,11 +87,11 @@ app2.controller('orders', function($scope, $http) {
 
 	$scope.cancel = function(event){ 
 		   var id = $(event.target).attr('alt');
-		   var confirm = window.confirm('Cancel this order ?');
+		   var confirm = window.confirm('Cancelar pedido ?');
 		   if(confirm){
 			  $.post('php/cancel.php',{ id: id },function(data){
 			  	$('#notif').show();
-			  	$('#notif').html('Order has been canceled !');
+			  	$('#notif').html('Seu pedido foi cancelado !');
 				  	setTimeout(function(){
 				  		$('#notif').fadeOut();
 				  	},1500);

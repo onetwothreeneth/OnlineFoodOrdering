@@ -6,7 +6,7 @@ if(isset($email)){ header('location:user'); } else {  }
 <!Doctype html>
 <html>
 	<head> 
-		<title>Conchos Home Of Sisig Goodness</title>
+		<title>Pedido Online</title>
 		<link rel="stylesheet" type="text/css" href="css/style.css">  
 		<link rel="icon" href="img/logo.png"> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -18,16 +18,16 @@ if(isset($email)){ header('location:user'); } else {  }
 			<!-- Header -->
 			<div class="header animated fadeInDown">
 				<div class="a"> 
-					<span class=""><a href="about"><i class="fa fa-star"></i> <p class="rwd">About</p></a></span>
-					<span class=""><a href="user"><i class="fa fa-image"></i> <p class="rwd">Gallery</p></a></span>
-					<span class=""><a href="contact"><i class="fa fa-phone"></i> <p class="rwd">Contact</p></a></span>
+					<span class=""><a href="about"><i class="fa fa-star"></i> <p class="rwd">Sobre</p></a></span>
+					<span class=""><a href="user"><i class="fa fa-image"></i> <p class="rwd">Galeria</p></a></span>
+					<span class=""><a href="contact"><i class="fa fa-phone"></i> <p class="rwd">Contato</p></a></span>
 				</div>
 				<div class="b"> 
 					<span><i class="fa fa-bell"></i></span>
 				</div>
 				<div class="c">
 					<span class="search"><i class="fa fa-search"></i> <p class="rwd"><input placeholder="Search"></p></span> 
-					<span class="join" id="loginmodal">Login</span> 
+					<span class="join" id="loginmodal">Entrar</span> 
 				</div>
 			</div>
 
@@ -36,12 +36,12 @@ if(isset($email)){ header('location:user'); } else {  }
 
 	
 			<div class="category animated fadeIn">
-				<button id="All" class="active">All</button>
-				<button id="Sisig" class="">Sisig</button>
-				<button id="Main-Meals" class="">Main Meals</button>
-				<button id="For-Kids" class="">For Kids</button>
-				<button id="Desserts" class="">Desserts</button>
-				<button id="Drinks" class="">Drinks</button>
+				<button id="All" class="active">Todos</button>
+				<button id="Sisig" class="">Prato</button>
+				<button id="Main-Meals" class="">Refeições</button>
+				<button id="For-Kids" class="">Infantil</button>
+				<button id="Desserts" class="">Sobremesa</button>
+				<button id="Drinks" class="">Bebidas</button>
 				<button id="Extras" class="">Extras</button>
 			</div>
  
@@ -54,7 +54,7 @@ if(isset($email)){ header('location:user'); } else {  }
 					<img src="admin/img/uploads/{{ x.image }}">
 					<span class="overlay animated bounce">
 						{{ x.description }}
-						<center><input type="number" name="qty" placeholder="Quantity" value="1" focus><button>Order</button> 
+						<center><input type="number" name="qty" placeholder="Quantity" value="1" focus><button>Pedir</button> 
 						</center>
 					</span>
 					<p>{{ x.name }}</p>
@@ -88,9 +88,9 @@ if(isset($email)){ header('location:user'); } else {  }
 			<form action="php/login.php" method="post" id="userlogin">
 				<input type="email" name="email" placeholder="Email" required>
 				<input type="password" name="pass" placeholder="Password" required>  
-				<button id="loginsubmit">Login</button>
+				<button id="loginsubmit">Entrar</button>
 			</form>
-			<button class="sign" id="signupbtn2">SignUp</button> 
+			<button class="sign" id="signupbtn2">Cadastrar</button> 
 		</div>
 		<div class="signup"> 
 			<i class="fa fa-remove" id="close"></i>
@@ -101,7 +101,7 @@ if(isset($email)){ header('location:user'); } else {  }
 				<input type="password" name="pass2" placeholder="Confirm Password" required>  
 				<textarea name="address" placeholder="Address" rows="5" required></textarea>
 				<input type="number" name="contact" placeholder="Contact" required>
-				<button>Signup</button>
+				<button>Cadastrar</button>
 			</form>
 			<button class="log" id="loginbtn2">Login</button>
 		

@@ -3,11 +3,11 @@ include "dbconn.php";
 
   echo "<table class='animated fadeInDown'>
 		    <tr>  
-		        <th>Name</th>
+		        <th>Nome</th>
 		        <th>Email</th>
-			    <th>Contact</th> 
-			    <th>Address</th> 
-			    <th>Message</th> 
+			    <th>Telefone</th> 
+			    <th>Endereço</th> 
+			    <th>Mensagem</th> 
 		    </tr>";
 
   $sql = "SELECT * FROM users";
@@ -24,8 +24,8 @@ include "dbconn.php";
 			                    <td>$email</td> 
 			                    <td>$contact</td>
 			                    <td>$address</td>
-			                    <!--<td><button style='background-color:#2c3e50; border-radius:0px'>Message</button></td>-->
-			                    <td><textarea rows='5' style='border:none; outline:none; padding:1%; font-size:0.8vw; width:95%;' placeholder='Message User' id='jasgdfaklshfbioasfnaksldbgahoisfohbaskglahsjasdgkjhasfasbgvjasgbvajkvasgjashasnjvkagvhancvabshkfvgasbjfbashvjkashbvjkascbahsjkgvbasjkvgbasjkvbasjbnkjSiugcrugmqughucghugiwhaumrheamieaupoiupioeqtumwctnvmcdsvfgnuahxmihnxebfxesrcdtfvgbyuhnbygvtcrdtfvygbuhniijmnuhgbyfvtdcrxcrfvtgbhnjmhbgvfcdfvgbhnjmnhbgvfgbhnjmmjnhbgvftcvgbhnjmk'></textarea>
+			                    <!--<td><button style='background-color:#2c3e50; border-radius:0px'>Mensagem</button></td>-->
+			                    <td><textarea rows='5' style='border:none; outline:none; padding:1%; font-size:0.8vw; width:95%;' placeholder='Mensagem do usuário' id='jasgdfaklshfbioasfnaksldbgahoisfohbaskglahsjasdgkjhasfasbgvjasgbvajkvasgjashasnjvkagvhancvabshkfvgasbjfbashvjkashbvjkascbahsjkgvbasjkvgbasjkvbasjbnkjSiugcrugmqughucghugiwhaumrheamieaupoiupioeqtumwctnvmcdsvfgnuahxmihnxebfxesrcdtfvgbyuhnbygvtcrdtfvygbuhniijmnuhgbyfvtdcrxcrfvtgbhnjmhbgvfcdfvgbhnjmnhbgvfgbhnjmmjnhbgvftcvgbhnjmk'></textarea>
 			                    <button style='background-color:#2c3e50; float:left; margin-left:2.5%; border-radius:0px;' id='hadfcvgahgadfasdfadfcvgahgadfasdfadfcvgahgadfasdf' alt='$email'>Message</button></td>
 			                </tr>";
  

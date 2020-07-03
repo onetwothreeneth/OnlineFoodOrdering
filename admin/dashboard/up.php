@@ -18,7 +18,7 @@ $id = $_POST['id'];
 								<input type="hidden" name="imgb" value="'.$row['id'].'">
 								<input type="file" name="image" id="addimage" required accept="image/png,image/jpg,image/jpeg,image/gif,image/bitman" >
 								<input type="text" name="name"  id="name" value="'.$row['name'].'" required="">
-								<input type="number" name="price" id="price" value="'.$row['price'].'" required="">
+								<input type="text" name="price" id="price" value="'.$row['price'].'" required="">
 								<select name="category" required="" id="category">
 										<option value="'.$row['category'].'">'.$row['category'].'</option>
 										<option value="Main-Meals">Main Meals</option>
@@ -28,7 +28,7 @@ $id = $_POST['id'];
 										<option value="Extras">Extras</option>
 								</select>
 								<textarea name="description" id="description" rows="8" value="'.$row['description'].'" resizable>'.$row['description'].'</textarea>
-								<button id="addprod-submit">Submit</button>
+								<button id="addprod-submit">Salvar</button>
 						</div>
 				</form>';
 
@@ -43,7 +43,7 @@ $id = $_POST['id'];
 				$('.content').css({'opacity': '1'});
 				$('.sidebar').css({'opacity': '1'});
 				$('.header').css({'opacity': '1'});
-				alert('Success');
+				alert('Sucesso');
                 $('.content').load('../php/admin/category/products.php');
 		});
 			} else {	

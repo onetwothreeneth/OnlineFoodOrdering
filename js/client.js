@@ -15,7 +15,7 @@ $(function(){
 		 		$('.login-modal #loader').hide();
 		 		$('.login-modal .login').show();
 		 		$('.login-modal .login').find('small').hide();
-		 		$('.login-modal .login').prepend('<center><small style="color:red;">Wrong Username or Password</small></center>');
+		 		$('.login-modal .login').prepend('<center><small style="color:red;">Nome errado ou senha</small></center>');
 		 		$('.login-modal .login input').val('');
 		 		$('.login-modal .signup').hide(); 
 	 		},2000);
@@ -31,7 +31,7 @@ $(function(){
 		 		$('.login-modal #loader').hide();
 		 		$('.login-modal .login').hide();
 		 		$('.login-modal .signup').find('small').hide();
-		 		$('.login-modal .signup').html('<center><small style="color:red;">You may now login</small></center>');
+		 		$('.login-modal .signup').html('<center><small style="color:red;">Você pode entrar agora</small></center>');
 		 		$('.login-modal .signup input').val('');
 		 		$('.login-modal .signup textarea').val('');	
 		 		$('.login-modal .signup').show(); 
@@ -47,7 +47,7 @@ $(function(){
 		 		$('.login-modal #loader').hide();
 		 		$('.login-modal .login').hide();
 		 		$('.login-modal .signup').find('small').hide();
-		 		$('.login-modal .signup').prepend('<center><small style="color:red;">Password Does not Match</small></center>');
+		 		$('.login-modal .signup').prepend('<center><small style="color:red;">Você foi cadastrado</small></center>');
 		 		$('.login-modal .signup input').val('');
 		 		$('.login-modal .signup textarea').val('');	
 		 		$('.login-modal .signup').show(); 
@@ -89,12 +89,12 @@ $(function(){
     	$.post('php/addtocart.php',{ qty: qty , prodid: prodid },function(data){
     		if(data>=1){
     			$('#notif').fadeIn();
-    			$('#notif').html('Product has been added to cart'); 
+    			$('#notif').html('Produto adicionado ao carrinho'); 
     			setTimeout(function(){
     				$('#notif').fadeOut();
     			},2000);
     		} else {
-    			alert('An error occured !');
+    			alert('Ocorreu um erro !');
     		}
     	});
 

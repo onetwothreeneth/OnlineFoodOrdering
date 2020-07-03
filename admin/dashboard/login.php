@@ -6,7 +6,7 @@ if(isset($admin)){ header('location:index'); } else { }
 <!Doctype html>
 <html>
 	<head>
-		<title>Conchos Sisig</title>
+		<title>Pedido Online</title>
 		<link rel="icon" href="img/logo.png">
 
 		<!-- CUSTOM JS/CSS -->
@@ -38,6 +38,15 @@ if(isset($admin)){ header('location:index'); } else { }
 		<script type="text/javascript" src="../js/form_jquery.js"></script>
 
 		</script>
+		
+		<style>
+		body {
+  background-image: url("http://localhost/OnlineFoodOrdering-master/admin/img/manager.jpeg");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-attachment: fixed;
+}
+		</style>
 	</head>
 
 	<body>
@@ -48,14 +57,14 @@ if(isset($admin)){ header('location:index'); } else { }
         
 		<div class="add_products animated bounce">
 				<div class="header-title">
-					 <h4> <i class="fa fa-users"></i> Admin Dashboard Login</h4>
+					 <h4> <i class="fa fa-users"></i> Entrar como Adminstrador</h4>
 					 <span><i class="fa fa-remove"></i></span>
 				</div><br><br><br> 
 				<center><kbd class="animated shake" id="erorr"></kbd></center>
 					<div class="form-cont"> 
 						<input type="text" name="user"  id="user" placeholder="Name" required="">
 						<input type="password" name="pass" id="pass" placeholder="Password" required=""> 
-						<button id="loginbtn" onclick="login()">Login</button>
+						<button id="loginbtn" onclick="login()">Entrar</button>
 					</div> 
 		</div> 
 		<script type="text/javascript">

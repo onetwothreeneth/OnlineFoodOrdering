@@ -1,26 +1,25 @@
-<?php 
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "conchos_sisig";
 
-include "dbconn.php";
- 
-$name = preg_replace('/[^a-zA-Z0-9\']/','',$_POST['name']);
-$email = $_POST['email']; 
-$pass = $_POST['pass']; 
-$pass2 = $_POST['pass2']; 
-$address = $_POST['address']; 
-$contact = $_POST['contact']; 
- 
-if ($pass==$pass2) {
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+  
+  $sql = "INSERT INTO users (name, email, pass,address, contact) VALUES
+('$_POST[name]','$_POST[email]','$_POST[pass]','$_POST[address]','$_POST[contact]')";
 
-		$sql = "INSERT INTO users values('','$name','$email','$contact','$address','$pass')";
-		$result = mysqli_query($conn,$sql); 
-		if ($result) {
-			echo "0";
-		} else {
-			echo "error";
-		}  
-
+if ($conn->query($sql) === TRUE) {
+    echo "Cadastro Realizado com Sucesso";
+    echo '<meta http-equiv="refresh" content="1;url=http://localhost/OnlineFoodOrdering-master/">';
 } else {
-	echo "pass";
+    echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
-?>
+$conn->close();
+?>		
